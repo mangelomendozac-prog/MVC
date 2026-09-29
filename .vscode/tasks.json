@@ -1,0 +1,32 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Compilar EntradasMvc",
+      "type": "process",
+      "command": "dotnet",
+      "args": [
+        "build",
+        "${workspaceFolder}/EntradasMvc.csproj"
+      ],
+      "problemMatcher": "$msCompile",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "Ejecutar EntradasMvc (HTTPS)",
+      "type": "process",
+      "command": "dotnet",
+      "args": [
+        "run",
+        "--project",
+        "${workspaceFolder}/EntradasMvc.csproj",
+        "--launch-profile",
+        "https"
+      ],
+      "problemMatcher": "$msCompile"
+    }
+  ]
+}
